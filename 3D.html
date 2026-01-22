@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3D</title>
+    <style>
+        .card {
+            width: 400px;
+            height: 400px;
+            background: linear-gradient(90deg, #8d8884, #064d69);
+            border-radius: 50%;
+            transform-style: preserve-3d;
+            transition: all 0.5s ease-in-out;
+        }
+
+        .circle {
+            border-radius: inherit;
+            position: absolute;
+            background: linear-gradient(#a3939327, #770c0c28);
+            box-shadow: -5px 5px 10px #ff050533;
+            transition: all 1s ease-in-out;
+        }
+
+        .card:hover {
+            transform: rotate3d(1, 1, 0, 80deg);
+        }
+
+        .card:hover .circle:nth-child(1) {
+            transform: translate3d(0, 0, 30px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+    </div>
+</body>
+</html>

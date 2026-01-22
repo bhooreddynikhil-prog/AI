@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animations</title>
+
+    <style>
+        /* ------------------------------
+           GLOBAL STYLES
+        ------------------------------ */
+        body {
+            font-family: Arial, sans-serif;
+            background: rgb(128, 58, 207);
+            padding: 20px;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        section {
+            background: #e2dbdb;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        /* ------------------------------
+           1. TRANSITION EXAMPLE
+        ------------------------------ */
+        .btn {
+            padding: 12px 25px;
+            background: rgb(3, 3, 38);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.5s, transform 0.5s;
+        }
+        
+        .btn:hover {
+            background: green;
+            transform: scale(1.1);
+        }
+
+        /* ------------------------------
+           2. SIMPLE KEYFRAMES ANIMATION
+        ------------------------------ */
+        .box {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgb(136, 72, 189);
+            animation: moveBox 1s infinite alternate;
+        }
+
+       @keyframes moveBox {
+            from {
+                transform: translateX(0px);
+            }
+            to {
+                transform: translateX(600px);
+            }
+        }
+
+        /* ------------------------------
+           3. FADE IN ANIMATION
+        ------------------------------ */
+        .fade {
+            opacity: 0;
+            animation: fadeIn 6s forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0.2; }
+            to { opacity: 1; }
+        }
+
+        /* ------------------------------
+           4. BOUNCE ANIMATION
+        ------------------------------ */
+        .bounce {
+            /*width: 40px;
+            height: 40px;
+            background: orange;*/
+            font-size: 2em;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-80px);
+            }
+        }
+
+        /* ------------------------------
+           5. ROTATING LOADER
+        ------------------------------ */
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 6px solid #ccc;
+            border-top: 6px solid rgb(23, 44, 149);
+            border-radius: 50%;
+            animation: spin 0.7s linear infinite;
+        }
+
+        @keyframes spin {
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* ------------------------------
+           6. SLIDE IN EFFECT
+        ------------------------------ */
+        .slide {
+            width: 200px;
+            padding: 15px;
+            background: purple;
+            color: white;
+            animation: slideIn 1.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateX(-300px);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+
+        /* ------------------------------
+           7. ANIMATION DELAY & DIRECTION
+        ------------------------------ */
+        .delayed {
+           width: 100px;
+            height: 100px;
+            animation: rotateBox 2s linear infinite reverse;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes rotateBox {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 align="center"><font color="blue">NEWS</font></h1>
+    <h1> CSS Animations – with NEWS articles></h1>
+
+    <section>
+        <h3>Aging polpulation threatens coversation goals of zoos</h3>
+        <h4 class="fade">
+           Improvements in wildlife husbandry mean that many zoo animals are living longer. This has put pressure on the finite holding capacity of zoos, which has often been addressed through a curtailing</h4>
+        <button class="btn">read more</button>
+    </section>
+
+    <section>
+        <h3>Forest loss and landscape pattern change cause water sheds to release more young water</h3>
+        <h4>2 The hydrological functions of forests are well recognized, but their influence on water storage and release dynamics remains poorly quantified. The fraction of young water (
+)—the proportion of</h4>
+        <div class="box"> swipe</div>
+    </section>
+
+    <section>
+        <h3>3 Conversation shuold assume realistic adaptive capacitives</h3>
+        <p class="fade">Conservation actions often assume implicitly that heritabilities are zero and that threatened populations cannot adapt to changing environments. To illustrate, we evaluated the last 10 y of</p>
+    </section>
+
+    <section>
+        <h2>4 LOGO</h2>
+        <div class="bounce">4 LOGO</div>
+    </section>
+
+    <section>
+        <h4>Geometric Deep Learning (GDL) unifies a broad class of machine learning techniques from the perspectives of symmetries, offering a framework for introducing problem-specific inductive biases</h4>
+        <div class="loader">load</div>
+    </section>
+
+    <section>
+        <h4>6 The distinct polar vortex dynamics observed on Jupiter and Saturn may provide insights into their interiors. In this study, we examine how the number and structure of polar vortices vary with</h4>
+        <div class="slide">welcome</div>
+    </section>
+
+    <section>
+        <h2>7️⃣ Delay & Direction</h2>
+        <div class="delayed">Empliz</div>
+    </section>
+
+</body>
+</html>
+
