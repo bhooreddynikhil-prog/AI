@@ -4,17 +4,16 @@
 }
 
 .employee-box {
-    border: 2px solid #ccc;
-    width: 300px;
+    border: 2px solid #f0e8e8;
+    width: 400px;
     margin: auto;
-    padding: 20px;
     border-radius: 10px;
     background-color: #f9f9f9;
 }
 
 .emp-name {
     font-weight: bold;
-    color: black;
+    color: rgb(173, 50, 230);
 }
 
 .emp-id {
